@@ -25,22 +25,22 @@ public class StudentDTO {
     @Pattern(regexp = "^SV\\d{4}$", message = "Mã sinh viên phải có dạng SVxxxx (VD: SV1234)")
     private String studentCode;
 
-    // Bài 4
-    @NotNull(message = "Thông tin phụ huynh là bắt buộc")
-    @Valid
-    private ParentDTO parent;
+    // Bài 5
+//    @NotNull(message = "Thông tin phụ huynh là bắt buộc")
+//    @Valid
+//    private ParentDTO parent;
 
     public StudentDTO() {
     }
 
 
-    public StudentDTO(String fullName, String major, Integer age, Double gpa, String studentCode, ParentDTO parent) {
+    public StudentDTO(String fullName, String major, Integer age, Double gpa, String studentCode) {
         this.fullName = fullName;
         this.major = major;
         this.age = age;
         this.gpa = gpa;
         this.studentCode = studentCode;
-        this.parent = parent;
+//        this.parent = parent;
     }
 
     // --- 6. Getters & Setters (Bắt buộc) ---
@@ -85,11 +85,10 @@ public class StudentDTO {
         this.studentCode = studentCode;
     }
 
-    public ParentDTO getParent() {
-        return parent;
-    }
-
-    public void setParent(ParentDTO parent) {
-        this.parent = parent;
-    }
+//    public ParentDTO getParent() {
+//        return parent;
+//    }
+//    public void setParent(ParentDTO parent) {
+//        this.parent = parent;
+//    }
 }
